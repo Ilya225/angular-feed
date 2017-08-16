@@ -1,0 +1,29 @@
+.post_link {
+    text-decoration: none;
+    font-size: 18px;
+    color: #721010;
+    width: 100%;
+    display: block;
+    height: 100%;
+    padding-top: 5px;
+    transition-duration: 1s;
+}
+
+.post_link_wrapper {
+    width: 50%;
+    text-align: center;
+    height: 65px;
+    transition-duration: 1s;
+}
+
+.post_link_wrapper:hover {
+    transition-duration: 1s;
+    transition-property: "background";
+    background: #100606;
+}
+
+.post_link:hover {
+    transition-duration: 1s;
+    transition-property: "color";
+    color: white;
+}

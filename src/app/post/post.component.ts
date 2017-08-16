@@ -1,9 +1,11 @@
+import { selector } from 'rxjs/operator/publish';
 import { Component, OnInit } from '@angular/core';
 
 import { Post } from './post';
 import { PostService } from './post.service';
 
 @Component({
+    selector: 'post',
     templateUrl: './post.component.html',
     styleUrls: ['./post.component.css']
 })

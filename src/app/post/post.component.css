@@ -3,14 +3,13 @@
     font-size: 18px;
     color: #721010;
     width: 100%;
-    display: block;
+    display: inline-block;
     height: 100%;
     padding-top: 5px;
     transition-duration: 1s;
 }
 
 .post_link_wrapper {
-    width: 50%;
     text-align: center;
     height: 65px;
     transition-duration: 1s;

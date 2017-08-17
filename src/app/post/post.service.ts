@@ -28,8 +28,8 @@ export class PostService {
     /**
      * Create a new post and return it 
      */
-    createPost() :Promise<Post> {
-        return this.http.post(`${API_BASE_URL}/${createPost}`, JSON.stringify({}), { headers: this.headers })
+    createPost(post :Post) :Promise<Post> {
+        return this.http.post(`${API_BASE_URL}/${createPost}`, JSON.stringify(post), { headers: this.headers })
         .toPromise()
         .then( res => res.json() as Post)
         .catch(this.errorHandler);

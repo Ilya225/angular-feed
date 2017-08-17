@@ -1,6 +1,6 @@
 import { selector } from 'rxjs/operator/multicast';
 import { Component, OnInit } from '@angular/core';
-
+import { Post } from './post';
 import { PostService } from './post.service';
 
 @Component({
@@ -9,7 +9,13 @@ import { PostService } from './post.service';
 })
 export class PostCreateComponent {
 
+    post:Post = new Post();
+
     constructor(
         private postService :PostService
     ) {}
+
+    createPost(post :Post) {
+        this.postService.createPost(post).then(post => console.log(post));
+    }
 }

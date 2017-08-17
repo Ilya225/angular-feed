@@ -1,15 +1,10 @@
-<h1> Posts </h1>
-<div *ngIf="post">
-    <h3>{{post.title}}</h3>
 
-    <div>
-        {{post.body}}
-    </div>
-    <br>
-    <br>
+    <div style="margin-top:20px"></div>
     <div *ngFor="let post of posts">
-        <div class="post_link_wrapper">
+        <div class="row">
+        <div class="post_link_wrapper col-6">
             <a class="post_link" href="#" >{{post.title}} </a>
         </div>
+        <div class="post_link_wrapper col-3"><span class="post_link">Delete</span></div>
+        </div>
     </div>
-</div>

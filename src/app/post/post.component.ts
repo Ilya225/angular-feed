@@ -22,8 +22,15 @@ export class PostComponent implements OnInit {
 
     getPosts() :void {
         this.postService.getPosts().then( (posts) => {
+            console.log(posts);
             this.posts = posts;
-            this.post = posts[0];
+        });
+    }
+
+    deletePost(post :Post): void {
+        this.postService.deletePost(post._Id).then(res => {
+            this.posts = this.posts.filter( p => p !== post)
+            console.log(this.posts)
         });
     }
 }

@@ -20,10 +20,10 @@ export const API_BASE_URL = `${API_HOST}:${API_PORT}`;
  export var allPosts   = "api/posts";
 
  /** GET */
- export var onePost    = "api/post/"; // api/post/{id}
+ export var onePost    = "api/post"; // api/post/{id}
 
  /** DELETE */
- export var deletePost = "api/post/delete/"; // api/post/delete/{id} 
+ export var deletePost = "api/post/delete"; // api/post/delete/{id} 
 
  /** PUT */
- export var updatePost = "api/post/"; // api/post/{id}
+ export var updatePost = "api/post"; // api/post/{id}

@@ -3,8 +3,8 @@
     <div *ngFor="let post of posts">
         <div class="row">
         <div class="post_link_wrapper col-6">
-            <a class="post_link" href="#" >{{post.title}} </a>
+            <a class="post_link" routerLink="/post-detail/{{post._Id}}" >{{post.title}} </a>
         </div>
-        <div class="post_link_wrapper col-3"><span class="post_link">Delete</span></div>
+        <div (click)="deletePost(post)" class="post_link_wrapper col-3"><span class="post_link">Delete</span></div>
         </div>
     </div>

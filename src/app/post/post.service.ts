@@ -35,6 +35,24 @@ export class PostService {
         .catch(this.errorHandler);
     }
 
+    deletePost(id :number) :Promise<any> {
+        return this.http.delete(`${API_BASE_URL}/${deletePost}/${id}`, {headers: this.headers})
+        .toPromise()
+        .then( res => res.json() )
+        .catch(this.errorHandler);
+    }
+
+    /**
+     * Get post by id
+     * @param id 
+     */
+    getPostById(id :string) :Promise<Post> {
+        return this.http.get(`${API_BASE_URL}/${onePost}/${id}`, { headers: this.headers })
+        .toPromise()
+        .then( res => res.json() as Post)
+        .catch(this.errorHandler);
+    }
+
     /**
      * Error handler
      * @param err 
@@ -43,17 +61,5 @@ export class PostService {
         //TODO error handler improvement
         return Promise.reject(err.message || err);
     }
-
-    /**
-     * Get post by id
-     * @param id 
-     */
-    getPostById(id :number) :Promise<Post> {
-        return this.http.get(`${API_BASE_URL}/${onePost}${id}`, { headers: this.headers })
-        .toPromise()
-        .then( res => res.json().data)
-        .catch(this.errorHandler);
-    }
-
 
 }

@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { PostService } from './post/post.service';
 import { PostComponent } from './post/post.component';
 import { PostCreateComponent } from './post/post-create.component';
+import { PostDetailComponent } from './post/post-detail.component';
 import { AppComponent } from './app.component';
 
 import { InMemoryDataService }  from './in-memory-data.service';
@@ -15,7 +16,8 @@ import { AppRoutingModule } from './app-routing.module';
   declarations: [
     AppComponent,
     PostComponent,
-    PostCreateComponent
+    PostCreateComponent,
+    PostDetailComponent
   ],
   imports: [
     BrowserModule,

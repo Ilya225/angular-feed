@@ -6,7 +6,7 @@ export class Post {
         this.body = body;
     }*/
 
-    id :number;
+    _Id :number;
     title :string;
     body :string;
 }

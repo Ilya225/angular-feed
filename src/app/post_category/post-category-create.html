@@ -1,0 +1,21 @@
+<div class="row">
+<div class="col-6">
+<form class="form">
+    <div class="col-12">
+        <div class="form-group">
+        <label for="title">Category Name</label>
+        <input [(ngModel)]="post.title" name="title" type="text" id="titel" class="form-control mx-sm-3" aria-describedby="title">
+        <small id="title" class="text-muted">
+            Must be 1-500 characters long.
+        </small>
+        </div>
+        </div>
+
+    <div class="col-12">
+        <div class="form-group" >
+    <button (click)="createPost(post)" type="button" class="btn btn-primary mx-sm-3">Create</button>
+        </div>
+    </div>
+</form>
+</div>
+</div>

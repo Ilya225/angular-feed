@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { SidebarComponent } from './sidebar/sidebar.component';
+
+import { HomeComponent } from './home/home.component';
+import { LoginService } from './login/login.service';
+import { LoginComponent } from './login/login.component';
 import { PostService } from './post/post.service';
 import { PostComponent } from './post/post.component';
 import { PostCreateComponent } from './post/post-create.component';
@@ -18,6 +22,8 @@ import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
+    HomeComponent,
     SidebarComponent,
     PostComponent,
     PostCreateComponent,
@@ -31,7 +37,10 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
     HttpModule
   ],
-  providers: [PostService],
+  providers: [
+    PostService,
+    LoginService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Post } from '../post';
 
 @Component({
     selector: 'post-category-create',
@@ -6,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class PostCategoryCreateComponent {
 
+    post: Post = new Post();
+
+    constructor() {}
+
+    createPost(post) {}
 }

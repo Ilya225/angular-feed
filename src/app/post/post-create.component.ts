@@ -1,4 +1,3 @@
-import { selector } from 'rxjs/operator/multicast';
 import { Component, OnInit } from '@angular/core';
 import { Post } from './post';
 import { Router } from '@angular/router';

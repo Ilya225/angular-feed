@@ -9,7 +9,7 @@ import 'rxjs/add/operator/switchMap';
 })
 export class PostDetailComponent implements OnInit {
 
-    private post;
+    post;
 
     constructor(
         private postService :PostService,

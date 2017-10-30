@@ -11,8 +11,8 @@ import { PostService } from './post.service';
 })
 export class PostComponent implements OnInit {
 
-    private post :Post;
-    private posts;
+    post :Post;
+    posts;
 
     constructor(private postService :PostService) {}
 

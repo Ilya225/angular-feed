@@ -8,8 +8,6 @@ import { CoreModule } from './core/core.module';
 import { UserProfileModule } from './user-profile/user-profile.module';
 
 import { HomeComponent } from './home/home.component';
-import { LoginService } from './login/login.service';
-import { LoginComponent } from './login/login.component';
 
 import { AppComponent } from './app.component';
 
@@ -20,7 +18,6 @@ import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     HomeComponent,
   ],
   imports: [
@@ -33,7 +30,6 @@ import { AppRoutingModule } from './app-routing.module';
     UserProfileModule
   ],
   providers: [
-    LoginService,
     Title
   ],
   bootstrap: [AppComponent]

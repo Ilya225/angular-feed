@@ -8,11 +8,16 @@ import { PostCategoryComponent } from './post_category/post-category.component';
 import { PostCategoryCreateComponent } from './post_category/post-category-create.component';
 
 const postRoutes: Routes = [
-    { path: 'posts', component: PostComponent },
-    { path: 'post/create', component: PostCreateComponent},
-    { path: 'post-detail/:postId', component: PostDetailComponent},
-    { path: 'post-category', component: PostCategoryComponent },
-    { path: 'post-category/create', component: PostCategoryCreateComponent }
+  {
+    path: '',
+    children: [
+      { path: 'list', component: PostComponent },
+      { path: 'create', component: PostCreateComponent},
+      { path: 'post-detail/:postId', component: PostDetailComponent},
+      { path: 'post-category', component: PostCategoryComponent },
+      { path: 'post-category/create', component: PostCategoryCreateComponent }
+    ]
+  }
 ];
 
 @NgModule({

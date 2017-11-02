@@ -3,7 +3,7 @@ import { Http, Headers } from '@angular/http';
 
 import { LoginForm } from './login-form';
 
-import { API_BASE_URL } from '../app.config';
+import { API_BASE_URL } from '../../app.config';
 
 import 'rxjs/add/operator/toPromise';
 

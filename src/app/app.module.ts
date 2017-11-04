@@ -5,8 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { CoreModule } from './core/core.module';
 import { UserProfileModule } from './user-profile/user-profile.module';
-
-import { HomeComponent } from './home/home.component';
+import { HomeModule } from './home/home.module';
 
 import { AppComponent } from './app.component';
 
@@ -15,13 +14,13 @@ import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
   ],
   imports: [
     BrowserModule, // order matters
     FormsModule,
     CoreModule,
     UserProfileModule,
+    HomeModule,
     AppRoutingModule,
     HttpModule
   ],

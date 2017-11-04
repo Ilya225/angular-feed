@@ -5,6 +5,7 @@ import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
 @Component({
     selector: 'signup',
     templateUrl: './sign-up.component.html',
+    styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent {
 
@@ -21,14 +22,45 @@ export class SignUpComponent {
         this.createForm();
     }
 
+    passwordMatchValidator(f: FormGroup) {
+        return f.get('password').value === f.get('confirm').value
+            ? null : { 'mismatch': true };
+    }
+
     createForm() {
         this.signupForm = this.fb.group({
-            username: [ '', Validators.required ],
-            email: '',
-            password: '',
-            confirm: ''
-        })
+            username: [ '', 
+                [
+                    Validators.required,
+                    Validators.pattern(new RegExp(/^\S*$/))
+                ] 
+            ],
+            email: [ '', 
+                [
+                    Validators.email,
+                    Validators.required,
+                ] 
+            ],
+            password: [ '',
+                [
+                    Validators.minLength(8)
+                ]
+            ],
+            confirm: [ '',
+                [
+                    Validators.minLength(8)
+                ]
+            ],
+        }, { validators: this.passwordMatchValidator })
     }
+
+    get username() { return this.signupForm.get('username'); }
+
+    get email() { return this.signupForm.get('email'); }
+
+    get password() { return this.signupForm.get('password'); }
+
+    get confirm() { return this.signupForm.get('confirm'); }
 
     clickHandler() {
         console.log(this.signupForm.value);

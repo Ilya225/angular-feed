@@ -2,19 +2,49 @@
     <div class="form-group">
         <label for="username">Username</label>
         <input type="text" formControlName="username" class="form-control" placeholder="Username">
+        <div 
+            *ngIf="username.invalid && (username.dirty || username.touched)"
+            class="alert alert-danger validation-error">
+            <div *ngIf="username.errors.required">
+                Email is required
+            </div>
+            <div *ngIf="username.errors.pattern">
+                No spaces allowed
+            </div>
+        </div>
     </div>
     <div class="form-group">
         <label for="email">Email</label>
         <input type="email" formControlName="email" class="form-control" placeholder="Email" novalidate> 
         <!-- novalidate prevents the browser from attempting native HTML validations  -->
+        <div 
+            *ngIf="email.invalid && (email.dirty || email.touched)"
+            class="alert alert-danger validation-error">
+            <div *ngIf="email.errors.required">
+                Email is required
+            </div>
+            <div *ngIf="email.errors.email">
+                Invalid email address
+            </div>
+        </div>
     </div>
     <div class="form-group">
         <label for="password">Password</label>
         <input type="password" formControlName="password" class="form-control" placeholder="Password">
+        <div 
+            *ngIf="password.invalid && (password.dirty || password.touched)"
+            class="alert alert-danger validation-error">
+            Password must be at least 8 characters long
+        </div>
     </div>
     <div class="form-group">
         <label for="confirm">Confirm</label>
         <input type="password" formControlName="confirm" class="form-control" placeholder="Confirm">
+    <div 
+        *ngIf="confirm.invalid && (confirm.dirty || confirm.touched)"
+        class="alert alert-danger validation-error">
+        Not match
+    </div>
     </div>
     <button (click)="clickHandler()" type="button" class="btn btn-default">Sign-up</button>
 </form>

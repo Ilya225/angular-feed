@@ -11,11 +11,6 @@ const routes: Routes = [
     loadChildren: 'app/post/post.module#PostModule',
     canLoad: [AuthGuardService]
   },
-  { 
-    path: '', 
-    component: HomeComponent,
-    canActivate: [AuthGuardService] 
-  },
   {
     path: '**',
     component: PageNotFoundComponent

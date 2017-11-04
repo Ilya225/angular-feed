@@ -1,0 +1,16 @@
+@import '~sass/variables';
+
+input.ng-valid.ng-dirty {
+    border: 1px solid $valid_color;
+    box-shadow: 0 0 5px $valid_color;
+}
+
+input.ng-invalid.ng-dirty {
+    border: 1px solid $invalid_color;
+    box-shadow: 0 0 5px $invalid_color;
+}
+
+.validation-error {
+    padding: 5px;
+    margin-top: 5px;
+}
